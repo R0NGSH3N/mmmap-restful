@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
-var user-mapSchema = new Schema({
+var usermapSchema = new Schema({
 	'userId' : String,
 	'userName' : String,
 	'mapIds' : Array
 });
 
-module.exports = mongoose.model('user-map', user-mapSchema);
+module.exports = mongoose.model('usermap', usermapSchema);

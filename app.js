@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./src/user/userRoutes');
 var mapRouter = require('./src/map/mapRoutes');
+var userMaprouter = require('./src/usermap/usermapRoutes');
 
 //install mongo connection
 var mongoose = require('mongoose');
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/map', mapRouter);
+app.use('/api/usermap', userMaprouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
